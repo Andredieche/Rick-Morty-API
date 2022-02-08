@@ -6,6 +6,7 @@
   font-family: 'Comforter', cursive;
   font-weight: 700;
 }
+
 body {
   font-family: 'Nunito Sans', sans-serif; 
   background-image: url(../src/img/fondo2.png);
@@ -25,10 +26,6 @@ body {
   box-shadow: 10px 5px 20px black;
 }
 
-.personaje.div {
-  border-radius: 100%;
-}
-
 .green {
   color: #2ebd41;
   text-shadow: 0 0 0.2em #8F7;
@@ -44,9 +41,7 @@ body {
 
 .yellow {
   color: rgb(55, 9, 87);
+  text-shadow: 0 0 0.2em rgb(206, 160, 198);
   font-weight: 600;
 }
 
-#imageCharacter {
-  border-radius: ;
-}
