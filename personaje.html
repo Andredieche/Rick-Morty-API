@@ -68,21 +68,35 @@
         </div>
       </div>
     </nav>
+  <!-- /navbar -->
 
-    <!-- Tarjeta personaje -->
-    <div class="container">
-      <div class="row">
+  
+  <!-- Tarjeta personaje -->
+  
+    <div class="container mt-5 mb-4">
+      
 
-        <div class="col-md-3 mt-5">
-          <h1></h1>
-          <div id="imageCharacter"></div>
+        <div class="row tarjeta mt-5">
+        
 
-        <div class="col-md-3">
-          <p class="Genero"></p>
+            <div class="personaje col-6 mt-5 text-center ">
+              <div id="imageCharacter"></div>
+            </div>
+    
+            <div class="col-6 mt-5 datos">
+              <h1 class="mt-4 mb-4"></h1>
+              <p id="status"></p>
+              <p id="gender"></p>
+              <p id="species"></p>
+              <p id="location"></p>
+            </div>
+
+
+
         </div>
 
-        </div>
-      </div>
+        
+      
     </div>
 
     <script
@@ -94,7 +108,10 @@
     <script>
       const nameCharacter = document.querySelector("h1");
       const imageCharacter = document.querySelector("#imageCharacter");
-      const infoCharacter = document.querySelector("h3")
+      const infoStatus = document.querySelector("#status")
+      const infoGender = document.querySelector("#gender")
+      const infoSpecies = document.querySelector("#species")
+      const infoLocation = document.querySelector("#location")
 
       // console.log(this);
 
@@ -116,10 +133,20 @@
           console.log(data);
           nameCharacter.innerText = data.name;
           imageCharacter.innerHTML = `<img src="${data.image}">`;
-          // infoCharacter.innerText = data.origin;
-          // infoCharacter.innerText = data.species;
-          infoCharacter.innerText = data.status;
-          // infoCharacter.innerText = data.type;
+          infoStatus.innerText = "Status: " + data.status;
+          if (data.status === 'Alive') {
+              infoStatus.classList.add('green');
+             } else if (data.status === 'Dead') {
+              infoStatus.classList.add('red');
+             } else {
+             infoStatus.classList.add('yellow');
+             }
+
+
+
+          infoGender.innerText = "Gender: " + data.gender;
+          infoSpecies.innerText = "Species: " + data.species;
+          infoLocation.innerText = "Location: " + data.location.name;
         })
         .catch((err) => err);
 

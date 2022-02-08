@@ -8,8 +8,45 @@
 }
 body {
   font-family: 'Nunito Sans', sans-serif; 
+  background-image: url(../src/img/fondo2.png);
+  background-color: #14022A;
+  background-attachment: fixed;
 }
 
 .card {
   width: 18rem; /* 16px *  18*/
+}
+
+.tarjeta {
+
+  background-color: rgb(229, 236, 236);
+  height: 25rem;
+  border-radius: 10px;
+  box-shadow: 10px 5px 20px black;
+}
+
+.personaje.div {
+  border-radius: 100%;
+}
+
+.green {
+  color: #2ebd41;
+  text-shadow: 0 0 0.2em #8F7;
+  font-weight: 600;
+
+}
+
+.red {
+  color: rgb(187, 7, 7);
+  text-shadow: 0 0 0.2em #F87, 0 0 0.2em #F87;
+  font-weight: 600;
+}
+
+.yellow {
+  color: rgb(55, 9, 87);
+  font-weight: 600;
+}
+
+#imageCharacter {
+  border-radius: ;
 }
